@@ -1,0 +1,36 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #25241f;
+  background: #f6f5f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --ink: #25241f;
+  --muted: #77766f;
+  --line: #deddd6;
+  --coral: #de674e;
+  --yellow: #e2b952;
+  --display: Arial, Helvetica, sans-serif;
+  --serif: Georgia, 'Times New Roman', serif;
+
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+::selection {
+  color: #fff;
+  background: var(--coral);
+}
