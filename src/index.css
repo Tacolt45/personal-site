@@ -1,0 +1,55 @@
+:root {
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Tech mode: paper, grid, mono */
+:root[data-mode='tech'] {
+  --bg: #f4f2ee;
+  --fg: #0e0e0e;
+  --muted: #6b6b68;
+  --line: #cfcdc8;
+  --font-display: var(--font-mono);
+  --display-weight: 500;
+  --display-style: normal;
+  --display-tracking: -0.04em;
+  --radius: 0px;
+  --grid-opacity: 0.5;
+  --grain-opacity: 0;
+}
+
+/* Art mode: ink, grain, serif */
+:root[data-mode='art'] {
+  --bg: #0e0e0e;
+  --fg: #f4f2ee;
+  --muted: #8f8d88;
+  --line: #2b2b2a;
+  --font-display: var(--font-serif);
+  --display-weight: 400;
+  --display-style: italic;
+  --display-tracking: -0.02em;
+  --radius: 2px;
+  --grid-opacity: 0;
+  --grain-opacity: 0.18;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  transition: background 0.6s ease, color 0.6s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; }
+}
